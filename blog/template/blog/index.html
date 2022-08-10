@@ -1,0 +1,12 @@
+{% extends 'blog/basic.html' %}
+
+{% block body %}
+   <div  style="" >
+      {% for post in posts %}
+        <h1 >Title:-{{post.title}}</h1><br><br>
+        <h3>Written by:-{{post.author}}</h3>
+        <h4>Published Date:- {{post.published_date}}</h4>
+        <article style="text-align:justify;" >{{post.text}}</article>
+      {% endfor %}
+    </div>
+{% endblock %}
